@@ -132,8 +132,18 @@ app.delete("/jokes/:id", (req, res) => {
   }
 
 })
-//8. DELETE All jokes
 
+//8. DELETE All jokes
+app.delete("/all",(req,res)=>{
+  console.log("delete all",req.query);
+  if(req.query.key === masterKey){
+    jokes = []
+    res.sendStatus(200)
+  }else{
+    res.status(404).json({error:'key is invalid'})
+  }
+  
+})
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
