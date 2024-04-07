@@ -1,0 +1,60 @@
+<%- include('partials/header.ejs') %>
+    <div class="content-container">
+
+        <div class="content">
+            <h2>
+                Your Space
+            </h2>
+            <div class="box">
+
+                <h3 class="sub-heading">
+                    <% if (locals.select==='add' ) { %>
+                        Add Product
+
+                        <% } else { %>
+                            Edit Product
+                            <% } %>
+                </h3>
+                <div class="form-container">
+                    <form action="add">
+                        <div class="form-field">
+                            <label for="title" style="margin-right: 68px;">Title</label>
+                            <span>
+                                <input type="text" name="title">
+                            </span>
+
+                        </div>
+                        <div class="form-field">
+                            <label for="title" style="margin-right: 12px;">Discription</label>
+                            <span>
+                                <input type="text" name="discription">
+                            </span>
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="amount" style="margin-right: 36px;">Amount</label>
+                            <span>
+                                <input type="text" name="amount">
+                            </span>
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="amount" style="margin-right: 48px;
+                            ">Image</label>
+                            <span>
+                                <input type="file" name="image">
+                            </span>
+
+                        </div>
+
+                        <button type="submit" class="btn">ADD </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <%- include('partials/footer.ejs') %>
+    </div>
