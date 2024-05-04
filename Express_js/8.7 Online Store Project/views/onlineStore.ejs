@@ -10,45 +10,19 @@
         </h2>
         <div class="items-list">
             <ul>
-                <li>
-                    <img src="assets/product1.png" alt="" class="product-img">
-                    <p class="title">Hydrating skin tint</p>
-                    <p class="discription">Ayurvedic BB cream | Lightweight</p>
-                    <p class="amt">MRP:650 RS</p>
-                    <button class="btn">
-                        ADD TO CART
-                    </button>
-                </li>
-                <li>
+               <% for( let index = 0; index < data.length; index++ ) { %>
+                <li >
                     <img src="assets/product2.png" alt="" class="product-img">
-                    <p class="title">Hydrating skin tint</p>
-                    <p class="discription">Ayurvedic BB cream | Lightweight</p>
-                    <p class="amt">MRP:650 RS</p>
+                    <p class="title"><%= data[index].title %> </p>
+                    <p class="discription"><%= data[index].description %> </p>
+                    <p class="amt"><%= data[index].amount %></p>
                     <button class="btn">
                         ADD TO CART
                     </button>
                 </li>
-                <li>
-                    <img src="assets/product1.png" alt="" class="product-img">
-                    <p class="title">Hydrating skin tint</p>
-                    <p class="discription">Ayurvedic BB cream | Lightweight</p>
-                    <p class="amt">MRP:650 RS</p>
-                    <button class="btn">
-                        ADD TO CART
-                    </button>
-                </li>
-                <li>
-                    <img src="assets/product2.png" alt="" class="product-img">
-                    <p class="title">Hydrating skin tint</p>
-                    <p class="discription">Ayurvedic BB cream | Lightweight</p>
-                    <p class="amt">MRP:650 RS</p>
-                    <button class="btn">
-                        ADD TO CART
-                    </button>
-                </li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
+               <% } %>
+                
+               
               </ul>
         </div>
     </div>
