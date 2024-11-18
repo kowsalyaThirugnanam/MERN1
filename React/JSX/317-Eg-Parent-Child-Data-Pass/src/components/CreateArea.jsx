@@ -18,8 +18,8 @@ function CreateArea(props) {
   return (
     <div>
       <form
-        onSubmit={() => {
-          props.addItem(cardInput, event);
+        onSubmit={(event) => {
+          props.addItem(cardInput,event);
           setCardInput({
             title: "",
             content: "",

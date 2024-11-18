@@ -20,7 +20,7 @@ function App() {
     console.log("delete id clicked", id);
     setNoteList((preValue) => {
       return preValue.filter((item, index) => {
-        return index != id;
+        return index !== id;
       });
     });
   }
